@@ -1,0 +1,22 @@
+{
+  "name": "qa-cert",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "Description for QaCert",
+  "private": true,
+  "license": "UNLICENSED",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "docker-up": "docker compose -f src/main/docker/app.yml pull && docker compose -f src/main/docker/app.yml up -d",
+    "docker-down": "docker compose -f src/main/docker/app.yml down",
+    "docker-stop": "docker compose -f src/main/docker/app.yml stop",
+    "docker-log": "docker compose -f src/main/docker/app.yml logs",
+    "docker-tail": "docker compose -f src/main/docker/app.yml logs -f"
+  }
+}
